@@ -31,44 +31,52 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
+        // Find the view that shows the numbers category
         TextView numbersTextView = (TextView) findViewById(R.id.numbers);
         if (numbersTextView != null) {
             numbersTextView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // Create an intent to open the {@link NumbersActivity}
                     Intent i = new Intent(MainActivity.this, NumbersActivity.class);
                     startActivity(i);
                 }
             });
         }
 
+        // Find the view that shows the numbers category
         TextView colorsTextView = (TextView) findViewById(R.id.colors);
         if (colorsTextView != null) {
             colorsTextView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // Create an intent to open the {@link ColorsActivity}
                     Intent i = new Intent(MainActivity.this, ColorsActivity.class);
                     startActivity(i);
                 }
             });
         }
 
+        // Find the view that shows the numbers category
         TextView familyTextView = (TextView) findViewById(R.id.family);
         if (familyTextView != null) {
             familyTextView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // Create an intent to open the {@link FamilyActivity}
                     Intent i = new Intent(MainActivity.this, FamilyActivity.class);
                     startActivity(i);
                 }
             });
         }
 
+        // Find the view that shows the numbers category
         TextView phrasesTextView = (TextView) findViewById(R.id.phrases);
         if (phrasesTextView != null) {
             phrasesTextView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // Create an intent to open the {@link PhraseActivity}
                     Intent i = new Intent(MainActivity.this, PhrasesActivity.class);
                     startActivity(i);
                 }
