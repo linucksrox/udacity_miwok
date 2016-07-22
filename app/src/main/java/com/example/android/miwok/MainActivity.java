@@ -30,10 +30,49 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
-    }
 
-    public void openNumbersList(View view) {
-        Intent intent = new Intent(this, NumbersActivity.class);
-        startActivity(intent);
+        TextView numbersTextView = (TextView) findViewById(R.id.numbers);
+        if (numbersTextView != null) {
+            numbersTextView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(MainActivity.this, NumbersActivity.class);
+                    startActivity(i);
+                }
+            });
+        }
+
+        TextView colorsTextView = (TextView) findViewById(R.id.colors);
+        if (colorsTextView != null) {
+            colorsTextView.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(MainActivity.this, ColorsActivity.class);
+                    startActivity(i);
+                }
+            });
+        }
+
+        TextView familyTextView = (TextView) findViewById(R.id.family);
+        if (familyTextView != null) {
+            familyTextView.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(MainActivity.this, FamilyActivity.class);
+                    startActivity(i);
+                }
+            });
+        }
+
+        TextView phrasesTextView = (TextView) findViewById(R.id.phrases);
+        if (phrasesTextView != null) {
+            phrasesTextView.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(MainActivity.this, PhrasesActivity.class);
+                    startActivity(i);
+                }
+            });
+        }
     }
 }
